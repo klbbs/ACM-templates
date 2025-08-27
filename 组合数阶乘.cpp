@@ -28,7 +28,8 @@ struct Comb {
         for (int i = n + 1; i <= m; i++) {
             _fac[i] = _fac[i - 1] * i;
         }
-        _invfac[m] = _fac[m].inv();
+        // 这里记得把mod改为你要取模的变量/数
+        _invfac[m] = _fac[m]^(long long)(mod-2);
         for (int i = m; i > n; i--) {
             _invfac[i - 1] = _invfac[i] * i;
             _inv[i] = _invfac[i] * _fac[i - 1];
