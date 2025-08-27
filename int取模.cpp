@@ -51,7 +51,7 @@ struct Modint
 
 /*
     食用方法:
-    const mod = xxxxx;
+    const int mod = xxxxx;
     typedef Modint<mod> mint;
     mint 类即自动取模,除法自动算逆元类
 */

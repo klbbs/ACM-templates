@@ -1,38 +1,47 @@
-// from https://www.cnblogs.com/WIDA/p/17633758.html
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+typedef long long LL;
+typedef long long ll;
+typedef pair<int,int> PII;
 
-/**   快速幂 - 普通版
- *    2023-10-09: https://atcoder.jp/contests/tenka1-2017/submissions/46411797
-**/
-int power(int a, i64 b, int p) {
-    int res = 1;
-    for (; b; b /= 2, a = 1LL * a * a % p) {
-        if (b % 2) {
-            res = 1LL * res * a % p;
-        }
-    }
-    return res;
+
+const int INF = 0x3f3f3f3f;
+
+
+void debug()
+{
+     cout<<"debug"<<endl;
 }
 
-/**   快速幂 - 手写乘法
- *    2023-09-27: https://qoj.ac/submission/189343
-**/
-using i64 = long long;
 
-i64 mul(i64 a, i64 b, i64 p) {
-    i64 c = a * b - i64(1.0L * a * b / p) * p;
-    c %= p;
-    if (c < 0) {
-        c += p;
-    }
-    return c;
+class solution
+{
+    public:
+        void solve();
+        void ycl();
+        solution(){};
+};
+
+
+void solution::solve()
+{
+    int a,b,c;cin>>a>>b>>c;
+
 }
 
-i64 power(i64 a, i64 b, i64 p) {
-    i64 res = 1;
-    for (; b; b /= 2, a = mul(a, a, p)) {
-        if (b % 2) {
-            res = mul(res, a, p);
-        }
+
+signed main()
+{
+    ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
+    int T = 1;
+    solution *AC = new solution();
+    //AC->ycl();
+    //cin>>T;
+    while(T --)
+    {
+        AC->solve();
     }
-    return res;
+    delete(AC);
+    return 0;
 }
